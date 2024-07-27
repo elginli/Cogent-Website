@@ -16,16 +16,16 @@ function Router(){
         )
     }
 
-    const BrowserRoutes = () => {
+    const BrowserRoutes = () =>{
         return(
             <BrowserRouter>
                 <Routes>
-                    <Route path = "/" elemetns={<Layout />} >
-                        <Route path="/" element={<Home />} /> 
-                        <Route path="/about" element={<About />} /> 
-                        <Route path="/contact" element={<Contact />} /> 
-                        <Route path="/projects" element={<Projects />} />
-                    </Route>
+                <Route path = "/" elements={<Layout />} >
+                    <Route index element={<Home />} /> 
+                    <Route path="/about" element={<About />} /> 
+                    <Route path="/contact" element={<Contact />} /> 
+                    <Route path="/projects" element={<Projects />} />
+                </Route>
                 </Routes>
             </BrowserRouter>
         )
