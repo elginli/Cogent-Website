@@ -2,6 +2,7 @@ import Home from "../pages/Home"
 import About from "../pages/About"
 import Contact from "../pages/Contact"
 import Projects from "../pages/Projects"
+import Header from "./Header"
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 
 
@@ -9,20 +10,24 @@ function Router(){
     const Layout = () =>{
         return(
           <>
+            <Header />
+            <Outlet />
           </>
         )
     }
 
     const BrowserRoutes = () => {
         return(
-            <BrowserRoutes>
+            <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Home />} /> //home page
-                    <Route path="/about" element={<About />} /> //about us page
-                    <Route path="/contact" element={<Contact />} /> //contact page
-                    <Route path="/projects" element={<Projects />} /> //projects
+                    <Route path = "/" elemetns={<Layout />} >
+                        <Route path="/" element={<Home />} /> 
+                        <Route path="/about" element={<About />} /> 
+                        <Route path="/contact" element={<Contact />} /> 
+                        <Route path="/projects" element={<Projects />} />
+                    </Route>
                 </Routes>
-            </BrowserRoutes>
+            </BrowserRouter>
         )
     }
 
