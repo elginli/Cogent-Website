@@ -1,0 +1,13 @@
+h1 {
+    display: flex;
+}
+
+.left-name{
+    font-family: 'Trebuchet MS';
+    color: rgba(153, 205, 50, 0.653);
+}
+
+.right-name{
+    font-family: 'Trebuchet MS';
+    color: grey;
+}
