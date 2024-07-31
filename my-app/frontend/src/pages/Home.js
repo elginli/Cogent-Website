@@ -10,6 +10,8 @@ const Home = () => {
 
 
             <p>We are are a construction and consulting company</p>
+
+            <p>We do </p>
         </div>
     )
 }

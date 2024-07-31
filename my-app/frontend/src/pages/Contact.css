@@ -1,0 +1,109 @@
+.container-contact {
+    justify-content: flex-start; 
+    justify-content: space-around;
+    align-items: start;
+    margin-top: 20px;
+    width: 100%; 
+    max-width: 950px; 
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background-color: #fff; 
+}
+
+.container-map {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.map, .text-content {
+    flex: 1 1 45%; /* Flex-grow, flex-shrink and flex-basis */
+    /* You can adjust the flex-basis to control the minimum width before wrapping */
+}
+
+.map {
+    max-width: 600px; 
+    height: 450px; 
+    border: none; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.text-content {
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-left: 20px;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .container-map {
+        flex-direction: column;
+    }
+
+    .map, .text-content {
+        flex-basis: 100%; 
+        max-width: 100%; 
+    }
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 8px; 
+    font-family: 'Lora';
+}
+
+.contactForm label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contactForm input,
+.contactForm textarea {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px; 
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.contactForm button {
+    padding: 15px 25px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contactForm button:hover {
+    background-color: #0056b3;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    border-color: #0056b3;
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 91, 187, 0.2); 
+}

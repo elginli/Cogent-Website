@@ -1,5 +1,6 @@
 import React from "react"
 import HCaptcha from '@hcaptcha/react-hcaptcha'
+import './Contact.css'
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
@@ -36,27 +37,29 @@ const Contact = () => {
     };
 
     return(
-        <div>
+        <div className="container-contact">
             <h1>Contact Us</h1>
 
-            <p>Find us at: </p>
-            <iframe 
-                className = "map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.9416873192986!2d-122.41364968855652!3d37.767965471870326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2f0c355a47%3A0x7ab5992b674c510f!2s1504%20Bryant%20St%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1722053975861!5m2!1sen!2sus" 
-                title="Google Maps Location of Our Office"
-                width="500" 
-                height="450" 
-                style={{ border: 0 }}
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-
-            <p>License: 947959</p>
-            <p>Cel: 415-613-0902</p>
-            <p>Tel: 415-255-7300</p>
-            <p>Fax: 415-255-7300</p>
-
+            <div className="container-map">
+                <iframe 
+                    className="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.9416873192986!2d-122.41364968855652!3d37.767965471870326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2f0c355a47%3A0x7ab5992b674c510f!2s1504%20Bryant%20St%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1722053975861!5m2!1sen!2sus" 
+                    title="Google Maps Location of Our Office"
+                    width="500" 
+                    height="450" 
+                    style={{ border: 0 }}
+                    allowFullScreen="" 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            
+                <div className="text-content">
+                    <strong><p>License: 947959</p></strong>
+                    <strong><p>Cel: 415-613-0902</p></strong>
+                    <strong><p>Tel: 415-255-7300</p></strong>
+                    <strong><p>Fax: 415-255-7300</p></strong>
+                </div>
+            </div>
 
             <form className="contactForm" onSubmit={onSubmit}>
                 Name: <input type="text" name="name" required/>
@@ -70,9 +73,6 @@ const Contact = () => {
                 <button type="submit">Submit</button>
             </form>
             <span>{result}</span>
-
-
-
         </div>
     )
 }

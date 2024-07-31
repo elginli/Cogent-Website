@@ -1,0 +1,30 @@
+.container-about{
+    width: 100%; 
+    max-width: 960px; 
+    margin: 0 auto; 
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background-color: #fff; 
+  }
+  
+  h1, h2 {
+    text-align: center; 
+    color: #333; 
+    font-family: 'Palantio Liontype';
+  }
+  
+  p, li {
+    color: #666; 
+    font-family: 'Lora'; 
+    line-height: 1.6; 
+    text-align: justify; 
+    color: black;
+  }
+  
+  ul {
+    padding-left: 20px; 
+  }
+  
+  li {
+    margin-bottom: 10px; 
+  }
