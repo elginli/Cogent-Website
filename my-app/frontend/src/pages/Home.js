@@ -5,13 +5,13 @@ const Home = () => {
         <div>
             <h1>
                 <div className="left-name">Cogent</div>
-                <div className="right-name">| Construction and Consulting Inc.</div>
+                <div className="right-name">Construction and Consulting Inc.</div>
             </h1> 
 
 
-            <p>We are are a construction and consulting company</p>
+            <p className="largefont">Comercial and Residential</p>
+            <p className="largefont">Construction and Consulting</p>
 
-            <p>We do </p>
         </div>
     )
 }

@@ -1,12 +1,16 @@
+
+
 body{
-    padding-top: 70px;
+    padding-top: 90px;
+
+    /*
     background-image: url('../assets/images/house2.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
+    */
 }
-
 
 
 .left-name{
@@ -17,4 +21,10 @@ body{
 .right-name{
     font-family: 'Trebuchet MS';
     color: grey;
+}
+
+.largefont{
+    font-family: 'Trebuchet MS';
+    font-size: xxx-large;
+    justify-content: center;
 }

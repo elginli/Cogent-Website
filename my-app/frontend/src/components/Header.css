@@ -4,17 +4,18 @@
   padding: 0.5rem 2rem;
   background-color: white;
   color: black;
-  position: fixed; /* Fixed positioning */
-  top: 0; /* Align to the top of the viewport */
-  left: 0; /* Align to the left of the viewport */
-  right: 0; /* Stretch across to the right of the viewport */
-  z-index: 1000; /* High z-index to stay on top */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
 .nav-bar ul {
   list-style: none;
   display: flex;
+  gap: 40px;
 }
 
 .nav-bar ul li {
@@ -26,10 +27,10 @@
   color: black;
   position: relative;
   display: inline-block;
-  transition: color 0.3s ease-in-out; /* Transition for the color */
+  transition: color 0.3s ease-in-out; 
 }
 
 .nav-bar a:hover {
   text-decoration: underline;
-  text-decoration-color: black; /* This can be adjusted to match your brand colors */
+  text-decoration-color: black; 
 }

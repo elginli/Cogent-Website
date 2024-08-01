@@ -1,0 +1,82 @@
+
+.project-container {
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .project{
+    width: 100%;
+    border-bottom: 0.5px solid #ccc;
+    border-top: 0.5px solid #ccc;
+  }
+  
+  .description-box {
+    flex-basis: 30%; 
+    padding-right: 20px; 
+    flex-basis: 300px; 
+    padding: 20px;
+    margin-right: 20px; 
+    border-right: 2px solid #ccc; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+  
+  .slider {
+    flex-basis: 70%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .image {
+    width: 100%;  
+    height: auto;
+    object-fit: contain; 
+    max-width: 75%; 
+    display: block; 
+    margin: 0 auto; 
+    border: 0.5px solid black; 
+}
+
+  .left-arrow, .right-arrow {
+    cursor: pointer;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 10px 15px; 
+    border-radius: 50%; 
+    transition: background-color 0.3s, transform 0.3s;
+    color: #333; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    background-color: #555; 
+    color: #fff;
+    transform: scale(1.1); 
+}
+
+
+@media (max-width: 700px) {
+    .image {
+        max-height: 150px; 
+    }
+}
