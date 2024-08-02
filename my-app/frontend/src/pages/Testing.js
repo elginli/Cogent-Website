@@ -35,19 +35,19 @@ const imageSet7 = [interior15]
 const imageSet8 = [interior20, interior21, interior6, interior10, interior17, interior18, interior19]
 
 const Slide = ({ images, title, description, link, category }) => {
-  const [current, setCurrent] = useState(0);
-  const length = images.length;
+  const [current, setCurrent] = useState(0)
+  const length = images.length
 
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent(current === length - 1 ? 0 : current + 1)
   };
 
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent(current === 0 ? length - 1 : current - 1)
   };
 
   if (!Array.isArray(images) || images.length <= 0) {
-    return null;
+    return null
   }
   
 

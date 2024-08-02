@@ -3,13 +3,14 @@
   justify-content: space-between;
   padding: 0.5rem 2rem;
   background-color: white;
+  align-items: center;
   color: black;
   position: fixed; 
   top: 0; 
   left: 0; 
   right: 0; 
   z-index: 1000; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  /*box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
 
 .nav-bar ul {
@@ -20,6 +21,9 @@
 
 .nav-bar ul li {
   padding-left: 1rem;
+  padding-top: 10px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav-bar a {
@@ -27,10 +31,26 @@
   color: black;
   position: relative;
   display: inline-block;
-  transition: color 0.3s ease-in-out; 
+  padding-bottom: 5px; 
+  overflow: hidden; 
 }
 
-.nav-bar a:hover {
-  text-decoration: underline;
-  text-decoration-color: black; 
+.nav-bar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black; 
+  transition: width 0.5s ease-in-out; 
+}
+
+.nav-bar a:hover::after {
+  width: 100%; 
+}
+
+.logo{
+  padding-top: 10px;
+  padding-left: 1rem;
 }

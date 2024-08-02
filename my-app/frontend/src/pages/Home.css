@@ -12,19 +12,73 @@ body{
     */
 }
 
-
-.left-name{
-    font-family: 'Trebuchet MS';
-    color: rgba(153, 205, 50, 0.653);
+.home-container {
+    max-width: 1704px; 
+    margin: 0 auto; 
+    padding: 50px 20px; 
+    padding-left: 10%; 
 }
 
-.right-name{
-    font-family: 'Trebuchet MS';
-    color: grey;
+.headline {
+    font-size: 85px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    text-align: left; 
+    font-family: 'Trebuchet MS Regular';
 }
 
-.largefont{
-    font-family: 'Trebuchet MS';
-    font-size: xxx-large;
-    justify-content: center;
+.subtext {
+    font-size: 19px; 
+    color: #555; 
+    max-width: 80%; 
+    margin: 0 auto 50px; 
+    padding-left: 10%; 
+    text-align: left; 
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin-top: 50px; 
+}
+
+.service {
+    flex-basis: 20%; 
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.service img {
+    width: 180px; 
+    height: 180px; 
+    border-radius: 50%; 
+    margin-bottom: 20px; 
+    border: 3px solid #ccc; 
+}
+
+.service p {
+    font-size: 25px; 
+    color: #333; 
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 800px) {
+    .service {
+        flex-basis: 45%; /* More space for each on smaller screens */
+    }
+    .services-container {
+        justify-content: center; /* Center services on smaller screens */
+    }
+
+    .service img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .service p {
+        font-size: 16px; /* Slightly smaller text on mobile devices */
+    }
 }
