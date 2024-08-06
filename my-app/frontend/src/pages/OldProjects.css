@@ -1,0 +1,45 @@
+title{
+    color: white;
+}
+
+
+.projects {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.project {
+    width: 40%; 
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for each project */
+    background: #fff; /* Background color for project blocks */
+    padding: 10px;
+    font-family: 'Lano';
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc; /* Separator style */
+    object-fit: cover;          
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery .project {
+        width: 100%; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .project {
+        flex-basis: 30%; /* Adjusts so three fit per row */
+    }
+}

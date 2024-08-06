@@ -7,7 +7,7 @@ const Home = () => {
     return(
         <div className="home-container">
             <h1 className="headline">Construction & Consulting Expertise</h1>
-            <p className="subtext">We engineer robust construction solutions and insightful consulting to enhance your projects from the ground up.</p>
+            <p className="subtext">We engineer construction solutions and insightful consulting to enhance your projects from the ground up.</p>
 
             <div className="services-container">
                 <div className="service">
@@ -23,6 +23,17 @@ const Home = () => {
                     <p>Layout Design</p>
                 </div>
             </div>
+
+            <div className="image-background"></div>
+
+            <div className="our-work-container">
+                <h1 className="our-work-header">OUR PAST WORKS</h1>
+                <p className="description">
+                Want to see more of our previous designs and works?
+                </p>
+                <button onClick={() => window.location.href = '/projects'}>View Projects</button>
+            </div>
+
         </div>
     )
 }

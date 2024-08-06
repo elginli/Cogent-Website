@@ -23,109 +23,114 @@ import interior19 from '../assets/images/interior19.jpeg'
 import interior20 from '../assets/images/interior20.jpeg'
 import interior21 from '../assets/images/interior21.jpeg'
 
-const Projects = () => {
-    return(
-        <div>
-            <h1>Projects</h1>
-            <h1>Interior and Exterior Work</h1>
-            <section class="projects">
-                <div class="gallery">
-                    <div class="project">
-                        <img src={interior1} alt="interior1"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior2} alt="interior2"></img>
-                        <h3>Contemporary Bathroom Upgrade</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior3} alt="interior3"></img>
-                        <h3>Eclectic Bathroom Remodel</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior4} alt="interior4"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={house1} alt="house1"></img>
-                        <h3>Contemporary Bathroom Upgrade</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior5} alt="interior5"></img>
-                        <h3>Eclectic Bathroom Remodel</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior6} alt="interior6"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior7} alt="interior7"></img>
-                        <h3>Contemporary Bathroom Upgrade</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior8} alt="interior8"></img>
-                        <h3>Eclectic Bathroom Remodel</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior9} alt="interior9"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior10} alt="interior10"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior17} alt="interior17"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior18} alt="interior18"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior19} alt="interior19"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior20} alt="interior20"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior21} alt="interior21"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior11} alt="interior11"></img>
-                        <h3>Contemporary Bathroom Upgrade</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior12} alt="interior12"></img>
-                        <h3>Eclectic Bathroom Remodel</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior13} alt="interior13"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior14} alt="interior14"></img>
-                        <h3>A Spacious and Fresh Feeling Bathroom</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior15} alt="interior15"></img>
-                        <h3>Contemporary Bathroom Upgrade</h3>
-                    </div>
-                    <div class="project">
-                        <img src={interior16} alt="interior16"></img>
-                        <h3>Eclectic Bathroom Remodel</h3>
-                    </div>
-                    <div class="project">
-                        <img src={house2} alt="house2"></img>
-                        <h3>Eclectic Bathroom Remodel</h3>
-                    </div>
-                </div>
-            </section>
+import React, { useState } from 'react'
+
+const imageSet1 = [interior1, interior2, interior3]
+const imageSet2 = [interior4]
+const imageSet3 = [interior5, interior7]
+const imageSet4 = [interior9, interior8]
+const imageSet5 = [interior16, house2, house1]
+const imageSet6 = [interior11, interior12, interior13, interior14]
+const imageSet7 = [interior15]
+const imageSet8 = [interior20, interior21, interior6, interior10, interior17, interior18, interior19]
+
+const Slide = ({ images, title, description, link, category }) => {
+  const [current, setCurrent] = useState(0)
+  const length = images.length
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1)
+  };
+
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1)
+  };
+
+  if (!Array.isArray(images) || images.length <= 0) {
+    return null
+  }
+  
+
+  return (
+    <div className="project-container">
+        <div className="description-box">
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <p>{link}</p>
+            <div className="details">
+                <p>{category}</p>
+            </div>
+            <div className="navigation">
+                <button onClick={prevSlide} className='left-arrow'>&lt;</button>
+                <button onClick={nextSlide} className='right-arrow'>&gt;</button>
+            </div>
         </div>
-    )
-}
+        <div className="slider">
+            {images.map((image, index) => (
+            <div className={index === current ? 'slide active' : 'slide'} key={index}>
+                {index === current && (
+                <img src={image} alt={`Project ${index + 1}`} className='image' />
+                )}
+            </div>
+            ))}
+        </div>
+    </div>
+    );
+};
+
+
+const Projects = () => {
+    return (
+        <div>
+            <h1>Project Gallery</h1>
+            <div className='project'>
+                <Slide images={imageSet1} title="Project 1"
+                    description="Interior kitchen remodel." 
+                    category="Category: Residential"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet8} title="Project 2"
+                     description="Interior housing remodel."
+                     link = {<span> <a href="https://www.architecturaldigest.com/story/a-grungy-san-francisco-basement-became-a-contemporary-english-cottage" target="_blank" rel="noreferrer">
+                                Read more here
+                            </a>.
+                        </span>
+                    }
+                    category="Category: Residential"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet2} title="Project 3"
+                    description="Interior Boba Shop remodel." 
+                    category="Category: Commercial"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet3} title="Project 4"
+                    description="Interior kitchen remodel."
+                    category="Category: Residential"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet4} title="Project 5"
+                    description="Interior basement remodel."
+                    category="Category: Commercial"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet5} title="Project 6"
+                    description="Exterior housing construction."
+                    category="Category: Residential"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet6} title="Project 7"
+                    description="Interior building construction."
+                    category="Category: Commercial"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet7} title="Project 8"
+                    description="Exterior housing remodel"
+                    category="Category: Residential"/>
+            </div>
+
+        </div>
+    );
+};
 
 export default Projects;

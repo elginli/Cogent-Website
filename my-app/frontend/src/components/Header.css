@@ -10,7 +10,6 @@
   left: 0; 
   right: 0; 
   z-index: 1000; 
-  /*box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
 }
 
 .nav-bar ul {
@@ -23,7 +22,7 @@
   padding-left: 1rem;
   padding-top: 10px;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Trebuchet MS Regular';
 }
 
 .nav-bar a {
@@ -53,4 +52,50 @@
 .logo{
   padding-top: 10px;
   padding-left: 1rem;
+}
+
+.hamburger {
+  display: none; 
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 15px; 
+  font-family: 'Trebuchet MS Regular';
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-bar ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-bar ul.open {
+    display: flex;
+  }
 }

@@ -10,15 +10,15 @@
   h1, h2 {
     text-align: center; 
     color: #333; 
-    font-family: 'Palantio Liontype';
+    font-family: 'Trebuchet MS Regular';
   }
   
   p, li {
     color: #666; 
-    font-family: 'Lora'; 
     line-height: 1.6; 
     text-align: justify; 
     color: black;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
   
   ul {
@@ -28,3 +28,23 @@
   li {
     margin-bottom: 10px; 
   }
+
+
+@media (max-width: 768px) {
+  .container-about {
+      padding: 20px;
+  }
+
+  h1, h2 {
+      font-size: 18px;
+  }
+
+  p, li {
+      font-size: 10px; 
+  }
+
+  ul {
+      padding-left: 15px; 
+  }
+}
+

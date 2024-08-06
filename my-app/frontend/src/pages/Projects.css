@@ -1,45 +1,121 @@
-title{
-    color: white;
-}
 
-
-.projects {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.gallery {
+.project-container {
     display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap; 
-}
+    align-items: stretch;
+    padding: 20px;
+  }
 
-.project {
-    width: 40%; 
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for each project */
-    background: #fff; /* Background color for project blocks */
-    padding: 10px;
-    font-family: 'Lano';
-}
-
-.project img {
+  .project{
     width: 100%;
+    border-bottom: 0.5px solid #ccc;
+    border-top: 0.5px solid #ccc;
+  }
+  
+  .description-box {
+    flex-basis: 30%; 
+    padding-right: 20px; 
+    flex-basis: 300px; 
+    padding: 20px;
+    margin-right: 20px; 
+    border-right: 2px solid #ccc; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+  
+  .slider {
+    flex-basis: 70%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .image {
+    width: 100%;  
     height: auto;
-    border-bottom: 1px solid #ccc; /* Separator style */
-    object-fit: cover;          
+    object-fit: contain; 
+    max-width: 75%; 
+    display: block; 
+    margin: 0 auto; 
+    border: 0.5px solid black; 
 }
 
-/* Responsive adjustments */
+  .left-arrow, .right-arrow {
+    cursor: pointer;
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 10px 15px; 
+    border-radius: 50%; 
+    transition: background-color 0.3s, transform 0.3s;
+    color: #333; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    background-color: #555; 
+    color: #fff;
+    transform: scale(1.1); 
+}
+
+
 @media (max-width: 768px) {
-    .gallery .project {
-        width: 100%; 
-    }
-}
+  .project-container {
+      flex-direction: column; 
+      padding: 10px; 
+  }
 
-@media (min-width: 1200px) {
-    .project {
-        flex-basis: 30%; /* Adjusts so three fit per row */
-    }
+  .project {
+      border-bottom: 0.5px solid #ccc; 
+      border-top: 0.5px solid #ccc;
+  }
+
+  .description-box {
+      flex-basis: 100%; 
+      padding: 10px;
+      margin-right: 0; 
+      border-right: none; 
+      border-bottom: 1px solid #ccc; 
+      order: 2; 
+  }
+
+  .navigation {
+      padding-top: 10px; 
+  }
+
+  .slider {
+      flex-basis: 100%; 
+      order: 1; 
+  }
+
+  .image {
+      width: 100%; 
+      max-width: 100%; 
+      margin-bottom: 20px; 
+  }
+
+  .left-arrow, .right-arrow {
+      padding: 5px 10px; 
+      font-size: 20px; 
+  }
+
+  .left-arrow:hover, .right-arrow:hover {
+      transform: scale(1); 
+  }
 }
