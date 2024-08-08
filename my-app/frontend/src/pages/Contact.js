@@ -55,7 +55,6 @@ const Contact = () => {
             
                 <div className="text-content">
                     <strong><p>License: 947959</p></strong>
-                    <strong><p>Cel: 415-613-0902</p></strong>
                     <strong><p>Tel: 415-255-7300</p></strong>
                     <strong><p>Fax: 415-255-7300</p></strong>
                 </div>
