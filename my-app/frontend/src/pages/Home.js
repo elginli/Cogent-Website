@@ -7,7 +7,7 @@ const Home = () => {
     return(
         <div className="home-container">
             <h1 className="headline">Construction & Consulting Expertise</h1>
-            <p className="subtext">We engineer construction solutions and insightful consulting to enhance your projects from the ground up.</p>
+            <p className="subtext">We engineer construction solutions and insightful consulting to create your projects from the ground up.</p>
 
             <div className="services-container">
                 <div className="service">

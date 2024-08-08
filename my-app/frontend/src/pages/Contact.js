@@ -17,7 +17,7 @@ const Contact = () => {
         const formData = new FormData(event.target);
 
         formData.append("h-captcha-response", hCaptchaToken);
-        formData.append("access_key", "9baae0fb-b35d-449b-85e1-15e84d187d1f")
+        formData.append("access_key", "487d4ed1-983f-4880-809d-19810f605fa3")
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -71,8 +71,8 @@ const Contact = () => {
                     onVerify={onHCaptchaChange} 
                 /> 
                 <button type="submit">Submit</button>
+                <span>{result}</span>
             </form>
-            <span>{result}</span>
         </div>
     )
 }

@@ -7,7 +7,7 @@ const About = () => {
             <section>
                 <h2>Who We Are</h2>
                     <p>
-                    Cogent is a construction and consulting firm located in San Francisco, California. With over 15 years in the industry, we have become a trusted name in both residential and commercial construction sectors. Our team of expert engineers, architects, and project managers is dedicated to delivering exceptional service from the initial concept through to completion.
+                    Cogent is a construction and consulting firm located in San Francisco, California. With 15 years in the industry, we have become a trusted name in both residential and commercial construction sectors. Our team of expert engineers, architects, and project managers is dedicated to delivering exceptional service from the initial concept through to completion.
                     </p>
             </section>
 

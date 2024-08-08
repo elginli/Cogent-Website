@@ -96,6 +96,12 @@
     box-shadow: 0 0 0 2px rgba(0, 91, 187, 0.2); 
 }
 
+.contactForm span {
+    text-align: center; 
+    display: block; 
+    margin-top: 10px; 
+}
+
 
 @media (max-width: 768px) {
     .container-contact, .contactForm {

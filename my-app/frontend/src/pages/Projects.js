@@ -84,13 +84,13 @@ const Projects = () => {
         <div>
             <h1>Project Gallery</h1>
             <div className='project'>
-                <Slide images={imageSet1} title="Project 1"
-                    description="Interior kitchen remodel." 
+                <Slide images={imageSet1} title="Kitchen Remodel"
+                    description="Interior kitchen remodel in San Francisco, California." 
                     category="Category: Residential"/>
             </div>
             <div className='project'>
-                <Slide images={imageSet8} title="Project 2"
-                     description="Interior housing remodel."
+                <Slide images={imageSet8} title="Basement Remodel"
+                     description="Interior housing remodel in San Francisco California."
                      link = {<span> <a href="https://www.architecturaldigest.com/story/a-grungy-san-francisco-basement-became-a-contemporary-english-cottage" target="_blank" rel="noreferrer">
                                 Read more here
                             </a>.
@@ -99,33 +99,33 @@ const Projects = () => {
                     category="Category: Residential"/>
             </div>
             <div className='project'>
-                <Slide images={imageSet2} title="Project 3"
-                    description="Interior Boba Shop remodel." 
+                <Slide images={imageSet2} title="Boba Shop"
+                    description="Interior Boba Shop remodel in San Carlos, California." 
                     category="Category: Commercial"/>
             </div>
             <div className='project'>
-                <Slide images={imageSet3} title="Project 4"
-                    description="Interior kitchen remodel."
+                <Slide images={imageSet3} title="Kitchen Remodel"
+                    description="Interior kitchen remodel in Oakland, California."
                     category="Category: Residential"/>
             </div>
             <div className='project'>
-                <Slide images={imageSet4} title="Project 5"
-                    description="Interior basement remodel."
+                <Slide images={imageSet4} title="Basement Remodel"
+                    description="Interior basement remodel in San Francisco, California."
                     category="Category: Commercial"/>
             </div>
             <div className='project'>
-                <Slide images={imageSet5} title="Project 6"
-                    description="Exterior housing construction."
+                <Slide images={imageSet5} title="Exterior Construction"
+                    description="Exterior housing construction in Oakland, California"
                     category="Category: Residential"/>
             </div>
             <div className='project'>
-                <Slide images={imageSet6} title="Project 7"
-                    description="Interior building construction."
+                <Slide images={imageSet6} title="Studio Remodel"
+                    description="Interior building construction in San Francisco, California."
                     category="Category: Commercial"/>
             </div>
             <div className='project'>
-                <Slide images={imageSet7} title="Project 8"
-                    description="Exterior housing remodel"
+                <Slide images={imageSet7} title="Exterior Remodel"
+                    description="Exterior house remodel in San Francisco, California."
                     category="Category: Residential"/>
             </div>
 
