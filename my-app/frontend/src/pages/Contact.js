@@ -65,7 +65,7 @@ const Contact = () => {
                 Email: <input type="email" name="email" required/>
                 Message: <textarea name="message" required></textarea>
                 <HCaptcha
-                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                    sitekey="f50e3892-bc96-4e76-8296-86fa75d2b86c"
                     reCaptchaCompat={false}
                     onVerify={onHCaptchaChange} 
                 /> 
