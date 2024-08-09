@@ -22,6 +22,13 @@ import interior18 from '../assets/images/interior18.jpeg'
 import interior19 from '../assets/images/interior19.jpeg'
 import interior20 from '../assets/images/interior20.jpeg'
 import interior21 from '../assets/images/interior21.jpeg'
+import Bar from '../assets/images/Bar.jpeg'
+import Boba from '../assets/images/Boba.jpeg'
+import Burlingame from '../assets/images/Burlingame.jpeg'
+import resturant from '../assets/images/resturant.jpeg'
+import stair1 from '../assets/images/stair1.jpeg'
+import stair2 from '../assets/images/stair2.jpeg'
+
 
 import React, { useState } from 'react'
 
@@ -33,6 +40,11 @@ const imageSet5 = [interior16, house2, house1]
 const imageSet6 = [interior11, interior12, interior13, interior14]
 const imageSet7 = [interior15]
 const imageSet8 = [interior20, interior21, interior6, interior10, interior17, interior18, interior19]
+const imageSet9 = [Bar]
+const imageSet10 = [Burlingame]
+const imageSet11 = [Boba]
+const imageSet12 = [resturant]
+const imageSet13 = [stair1, stair2]
 
 const Slide = ({ images, title, description, link, category }) => {
   const [current, setCurrent] = useState(0)
@@ -127,6 +139,31 @@ const Projects = () => {
                 <Slide images={imageSet7} title="Exterior Remodel"
                     description="Exterior house remodel in San Francisco, California."
                     category="Category: Residential"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet9} title="Bar Remodel"
+                    description="Bar remodel in San Francisco, California."
+                    category="Category: Commercial"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet10} title="Exterior remodel"
+                    description="House exterior remodel in Burlingame, California."
+                    category="Category: Residential"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet11} title="Boba Shop"
+                    description="Boba shop constrcution in San Francisco, California."
+                    category="Category: Commercial"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet12} title="Interior Remodel"
+                    description="Resturant interior remodel in San Francisco, California."
+                    category="Category: Commercial"/>
+            </div>
+            <div className='project'>
+                <Slide images={imageSet13} title="Stair Remodel"
+                    description="SF City stair remodel for in San Francisco, California."
+                    category="Category: Commercial"/>
             </div>
 
         </div>
